@@ -2,14 +2,16 @@
 % Please edit documentation in R/UniMIN.R
 \name{UniMIN}
 \alias{UniMIN}
-\title{UniMIN test for testing equality means against umbrella-ordered alternatives (peak = ceiling(k/2) = h) in one-way ANOVA}
+\title{UniMIN test for testing equality means against umbrella-ordered alternatives (peak = h) in one-way ANOVA}
 \usage{
-UniMIN(sample_data, significance_level)
+UniMIN(sample_data, significance_level, h)
 }
 \arguments{
 \item{sample_data}{list}
 
 \item{significance_level}{numeric}
+
+\item{h}{numeric}
 }
 \value{
 Critical value numeric
@@ -19,10 +21,10 @@ Test statistic value numeric
 Result Character
 }
 \description{
-UniMIN test for testing equality means against umbrella-ordered alternatives (peak = ceiling(k/2) = h) in one-way ANOVA
+UniMIN test for testing equality means against umbrella-ordered alternatives (peak = h) in one-way ANOVA
 }
 \details{
-Testing of H_0:mu_1 = mu_2 = ... = mu_k vs H_1:mu_1 <=.....<= mu_(h-1)<= mu_h >= mu_(h+1)>=....>= mu_k (at least one strict inequality), where mu_i represents the population means of the i-th treatment. The input consists of two variables: sample_data and significance_level. The output consists of the critical value, the UniMIN test statistic value, and the result, which indicates whether to reject or not reject the null hypothesis.
+Testing of H_0:mu_1 = mu_2 = ... = mu_k vs H_1:mu_1 <=.....<= mu_(h-1)<= mu_h >= mu_(h+1)>=....>= mu_k (at least one strict inequality), where mu_i represents the population means of the i-th treatment. The input consists of three variables: sample_data, significance_level, and peak = h. The output consists of the critical value, the UniMAX test statistic value, and the result, which indicates whether to reject or not reject the null hypothesis.
 }
 \author{
 Subha Halder
